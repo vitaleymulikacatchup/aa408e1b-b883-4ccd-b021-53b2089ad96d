@@ -30,7 +30,13 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} ${poppins.variable} antialiased`}
       >
-        {children}
+        <SiteThemeProvider theme={{
+          styleVariant: "funAndTrendy",
+          colorTemplate: 1,
+          textAnimation: "slide",
+        }}>
+          {children}
+        </SiteThemeProvider>
       </body>
     </html>
   );
